@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: load
+  namespace: namespace-1
+spec:
+  template:
+    spec:
+      containers:
+      - name: fortio
+        args:
+        - load
+        - -qps=100
+        - -t=5m
+        - http://app-1/
+        image: fortio/fortio
+      restartPolicy: Never
+

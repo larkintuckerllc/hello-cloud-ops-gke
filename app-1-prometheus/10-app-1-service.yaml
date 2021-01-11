@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: app-1
+  name: app-1
+  namespace: namespace-1
+spec:
+  ports:
+  - name: apache
+    port: 80
+    protocol: TCP
+    targetPort: apache
+  - name: prometheus
+    port: 9117
+    protocol: TCP
+    targetPort: prometheus
+  selector:
+    app: app-1
