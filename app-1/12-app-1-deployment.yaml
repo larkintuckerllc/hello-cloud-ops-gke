@@ -30,9 +30,6 @@ spec:
             cpu: 40m
         volumeMounts:
         - name: config
-          mountPath: /opt/bitnami/apache/conf/bitnami/bitnami.conf
-          subPath: bitnami.conf
-        - name: config
           mountPath: /app/index.html
           subPath: index.html
       volumes:
