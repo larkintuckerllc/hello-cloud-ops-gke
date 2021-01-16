@@ -37,7 +37,7 @@ spec:
         - --prometheus.wal-directory=/data/wal
         - --prometheus.api-address=http://127.0.0.1:9090
         - --stackdriver.kubernetes.location=us-central1
-        - --stackdriver.kubernetes.cluster-name=cluster-3
+        - --stackdriver.kubernetes.cluster-name=cluster-1
         ports:
         - name: sidecar
           containerPort: 9091
